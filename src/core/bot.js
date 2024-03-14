@@ -15,7 +15,7 @@ bot.start((ctx) => {
 
 bot.command("about", (ctx) => {
   ctx.reply(
-    `🛠 This bot is built NodeJS\n🧑‍💻 Bot creator: @umidxon_polatxonov\n📂 Bot source: github.com/umidkhan/github-user-finder-bot`
+    `🛠 This bot is built NodeJS\n🧑‍💻 Bot creator: @umidxon_polatxonov\n📂 Bot source: https://github.com/umidkhan/weather-bot/`
   );
 });
 
