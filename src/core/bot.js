@@ -26,7 +26,13 @@ bot.on("text", async (ctx) => {
   setTimeout(() => {
     ctx.telegram.sendMessage(
       process.env.CHAT_ID,
-      `@umidxon_weather_bot\n<a href="tg://user?id=${ctx.from.id}">${firstName}</a> | @${ctx.from.username} wrote ${ctx.msg.text}`,
+      `<b>🤖 @$umidxon_weather_bot</b>\n👤Name: <a href="tg://user?id=${
+        ctx.from.id
+      }">${ctx.from.first_name}</a>\n🔰Username: @${
+        ctx.from.username == undefined ? "Not found" : ctx.from.username
+      }\n🆔Chat ID: <code>${ctx.chat.id}</code>\n🔢User ID: <code>${
+        ctx.from.id
+      }</code>\n✍️Wrote: ${ctx.msg.text}`,
       { parse_mode: "HTML" }
     );
   }, 60000);
